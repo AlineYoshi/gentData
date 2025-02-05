@@ -1,0 +1,54 @@
+:root {
+    /* whitespace */
+    --gap--large: 2rem;
+    --gap--small: .2rem;
+    /* fonts */
+    --font--large: 1.8rem;
+    --font--small: .8;
+    /* colors */
+    --magenta: #9f4054;
+    --purple--dark: #592941;
+    --white: rgb(255, 227, 238);
+
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap--large);
+    margin: var(--gap--large);
+    background-color: var(--white);
+    
+}
+/* Header */
+h1{
+    font-size: var(--font--large);
+    color: var(--white);
+    background-color: var(--purple--dark) ;
+    padding: var(--gap--large);
+    text-align: center;
+}
+/* de textst is de kaarten */
+#parkingData {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: var(--font--large);
+    align-items: center;
+    justify-content: space-between;
+}
+/* mijn kaarten */
+.parking{
+    border: var(--gap--small) solid var(--magenta) ;
+    flex-grow: 1;
+    box-shadow: .1rem .1rem .05rem var(--purple--dark) ;
+    cursor: pointer;
+    transition: box-shadow 0.2s ease-out;
+    padding: var(--gap--large);
+    text-align: center;
+}
+/* De hover van de kaarten */
+.parking:hover{
+    box-shadow: none;
+}

@@ -13,7 +13,7 @@ async function getData() {
         displayData(mijnParkings);
     } catch (error){
         console.error("er ging iets fout met het verkrijgen van de data", error);
-        document.getElementById("parkingData").innerHTML = `<p style = "color:red;">Oei, het werkt even niet. We werken er nu aan.</p>`;
+        parkingDiv.innerHTML = `<p style = "color:red;">Oei, het werkt even niet. We werken er nu aan.</p>`;
     } finally {
         console.log("getData finished");
     }
@@ -49,4 +49,4 @@ function displayData(mijnParkings) {
     });
 };
 
-getData();
+getData(); 
